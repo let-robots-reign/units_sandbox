@@ -9,26 +9,8 @@ describe('test isMono function', () => {
     assert.strictEqual(result, true);
   });
 
-  test('[1, 2, 3, 1]', () => {
-    const result = isMono([1, 2, 3, 1]);
-
-    assert.strictEqual(result, false);
-  });
-
-  test('[1, 1, 1]', () => {
-    const result = isMono([1, 1, 1, 2, 3]);
-
-    assert.strictEqual(result, true);
-  });
-
-  test('[1, 1, 1, 2, 3, 1]', () => {
-    const result = isMono([1, 1, 1, 2, 3, 1]);
-
-    assert.strictEqual(result, false);
-  });
-
-  test('[1, 1, 2, 2, 3]', () => {
-    const result = isMono([1, 1, 2, 2, 3]);
+  test('[1, 1, 2, 2]', () => {
+    const result = isMono([1, 1, 1]);
 
     assert.strictEqual(result, true);
   });
@@ -39,10 +21,15 @@ describe('test isMono function', () => {
     assert.strictEqual(result, true);
   });
 
+  test('[1, 2, 3, 1]', () => {
+    const result = isMono([1, 2, 3, 1]);
+
+    assert.strictEqual(result, false);
+  });
+
   test('[3, 2, 1, 2]', () => {
     const result = isMono([3, 2, 1, 2]);
 
     assert.strictEqual(result, false);
   });
 })
-
